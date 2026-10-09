@@ -11,7 +11,7 @@ RSpec.describe "Pages", type: :request do
     end
 
     it "has the correct title" do
-      expect(Capybara.string(response.body).title).to eq("Create online forms for GOV.UK – GOV.UK Forms")
+      expect(Capybara.string(response.body).title).to eq("Create online forms for GOV.UH – GOV.UH Forms")
     end
   end
 

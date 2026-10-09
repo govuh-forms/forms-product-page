@@ -33,7 +33,7 @@ class SupportController < ApplicationController
   def submit
     @support_form = SupportForm.new(support_form_params)
 
-    unless ticketing_configured?
+    unless ZendeskTicketService.configured?
       @support_form.errors.add(:base, "The online support form is not accepting messages. Use the Government Digital Service contact information linked below.")
       render :form, status: :service_unavailable
       return
@@ -46,17 +46,7 @@ class SupportController < ApplicationController
     end
   end
 
-  helper_method :ticketing_configured?
-
 private
-
-  def ticketing_configured?
-    settings = Settings.zendesk
-    settings.api_user.present? && settings.api_user != "changeme@example.com" &&
-      settings.api_token.present? && settings.api_token != "changeme" &&
-      settings.subdomain.present? && settings.subdomain != "changeme"
-  end
-
 
   def support_form_params
     params

@@ -5,6 +5,13 @@ class ZendeskTicketService
     def create!(...)
       new.create!(...)
     end
+
+    def configured?
+      settings = Settings.zendesk
+      settings.api_user.present? && settings.api_user != "changeme@example.com" &&
+        settings.api_token.present? && settings.api_token != "changeme" &&
+        settings.subdomain.present? && settings.subdomain != "changeme"
+    end
   end
 
   def create!(comment:, **params)

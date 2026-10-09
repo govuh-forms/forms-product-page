@@ -4,11 +4,11 @@ RSpec.describe ApplicationHelper, type: :helper do
   describe "#page_title" do
     it "returns the title with separator and default suffix" do
       helper.content_for(:title, "Test Title")
-      expect(helper.page_title).to eq("Test Title – GOV.UK Forms")
+      expect(helper.page_title).to eq("Test Title – GOV.UH Forms")
     end
 
     it "returns only the default suffix if title is not set" do
-      expect(helper.page_title).to eq("GOV.UK Forms")
+      expect(helper.page_title).to eq("GOV.UH Forms")
     end
   end
 

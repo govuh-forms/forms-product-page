@@ -50,7 +50,7 @@ RSpec.describe "layouts/application", type: :view do
       expect(rendered).to have_selector(
         ".govuk-footer",
       ) do |footer|
-        expect(footer).to have_link("Government Digital Service", href: "https://www.gov.uk/government/organisations/government-digital-service")
+        expect(footer).to have_link("Government Digital Service", href: "https://www.gov.uhrblx.com/government/organisations/government-digital-service")
       end
     end
   end

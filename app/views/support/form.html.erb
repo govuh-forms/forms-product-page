@@ -2,7 +2,7 @@
 <% set_page_robots("noindex") %>
 <% content_for :back_link, govuk_back_link(href: support_path) %>
 
-<% if ticketing_configured? %>
+<% if ZendeskTicketService.configured? %>
   <%= form_with model: @support_form, url: false do |f| %>
     <%= f.govuk_error_summary %>
 

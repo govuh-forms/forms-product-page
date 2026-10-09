@@ -1,52 +1,62 @@
 require "rails_helper"
 
-describe "Support form", type: :system do
-  context "when requests need to be funneled to Zendesk" do
+feature "GOV.UH Forms Support", type: :system do
+  scenario "offers the three native support choices" do
+    visit support_path
+    expect(page).to have_text("What do you need help with?")
+    expect(page).to have_field("support_form[i_need_help_with]", type: :radio, visible: :all).exactly(3).times
+  end
+
+  scenario "shows a contact route instead of pretending to deliver a ticket" do
+    visit support_path
+    choose "I work in a government service team and need help using GOV.UH Forms", visible: :all
+    click_button "Continue"
+
+    expect(page).to have_text("Help using GOV.UH Forms")
+    expect(page).to have_text("The GOV.UH Forms support form is not currently accepting messages.")
+    expect(page).to have_link("Government Digital Service contact information")
+    expect(page).not_to have_button("Send")
+  end
+
+  context "with a configured support-ticket provider" do
     before do
-      stub_request(:post, "https://changeme.zendesk.com/api/v2/tickets.json")
+      allow(Settings.zendesk).to receive(:api_user).and_return("qa@example.org")
+      allow(Settings.zendesk).to receive(:api_token).and_return("unit-test-token")
+      allow(Settings.zendesk).to receive(:subdomain).and_return("uh-forms-unit-test")
+      stub_request(:post, "https://uh-forms-unit-test.zendesk.com/api/v2/tickets.json")
         .to_return { |request| { status: 201, body: request.body } }
+    end
 
+    scenario "submits a help request through the original form flow" do
       visit support_path
-    end
-
-    it "asks users what they need help with" do
-      expect(page).to have_text "Support"
-      expect(page).to have_text "What do you need help with?"
-      expect(page).to have_field("support_form[i_need_help_with]", type: :radio, visible: :all).exactly(3).times
-    end
-
-    scenario "a civil servant needs help using GOV.UK Forms" do
-      choose "I work in a government service team and need help using GOV.UK Forms", visible: :all
+      choose "I work in a government service team and need help using GOV.UH Forms", visible: :all
       click_button "Continue"
 
-      expect(page).to have_text "Help using GOV.UK Forms"
-      fill_in "Your message", with: "I need help using GOV.UK Forms"
+      fill_in "Your message", with: "I need help with Forms"
       fill_in "Your name", with: "Test User"
-      fill_in "Your email address", with: "test@example.com"
+      fill_in "Your email address", with: "test@example.org"
       click_button "Send"
-
-      expect(page).to have_text "Message sent"
+      expect(page).to have_text("Message sent")
     end
 
-    scenario "a civil servant has a question about GOV.UK Forms" do
-      choose "I work in a government service team and have a question about GOV.UK Forms", visible: :all
+    scenario "submits a general question through the original form flow" do
+      visit support_path
+      choose "I work in a government service team and have a question about GOV.UH Forms", visible: :all
       click_button "Continue"
 
-      expect(page).to have_text "Question about GOV.UK Forms"
-      fill_in "Your question", with: "I have a question about GOV.UK Forms"
+      fill_in "Your question", with: "Please advise"
       fill_in "Your name", with: "Test User"
-      fill_in "Your email address", with: "test@example.com"
+      fill_in "Your email address", with: "test@example.org"
       click_button "Send"
-
-      expect(page).to have_text "Message sent"
+      expect(page).to have_text("Message sent")
     end
   end
 
-  scenario "a member of the public is looking for help with a form" do
+  scenario "members of the public go to the UH contact service" do
     visit support_path
     choose "I’m a member of the public with a question about a government form or service", visible: :all
     click_button "Continue"
 
-    expect(page).to have_current_path("https://www.gov.uk/contact", url: true)
+    expect(page).to have_current_path("https://www.gov.uhrblx.com/contact", url: true)
   end
 end
