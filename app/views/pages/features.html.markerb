@@ -1,134 +1,19 @@
-<% set_page_title('Features') %>
-<% set_page_description('The features already available.') %>
-
 # Features
 
-GOV.UK Forms is in public beta. This means it’s fully operational and supported, but we’re regularly adding new features, focusing on the most commonly needed features first.
+GOV.UH Forms provides the common tools needed to build and run straightforward online forms.
 
-## Create questions
+Current editor capabilities include:
 
-You can create questions to ask for:
+- form names and introductory content
+- question and guidance pages
+- common answer types
+- page ordering
+- conditional routes
+- previewing draft forms
+- privacy information
+- contact details and declarations
+- what-happens-next content
+- publishing reviewed versions to the public Forms Runner
+- archiving and updating forms
 
-- a person's name
-- an organisation's name
-- a phone number
-- an email address
-- a UK or international address
-- a National Insurance number
-- a date
-- a number
-- a file
-- a selection of one or more answers from a list of options
-- a short or long text answer
-
-You can also:
-
-- add short 'hint text' or longer guidance to a question to help people answer it
-- make a question optional
-- let people add multiple responses to a single question (for example, to provide the names of all their household members)
-
-## Help people answer questions accurately and easily
-
-When people complete a form, their responses will be validated to make sure they're in the correct format. For example, a question asking for an email address will only accept an answer in the format of an email address.
-
-For questions that ask for certain types of personal information (such as a name, address or date of birth) the input field will be encoded so people can use their browser or assistive technology to answer more easily. For example, by completing the field with information saved in their browser.
-
-## Use routes to skip questions or create branches
-
-You can add routes to direct people through your form based on their answers, so they only need to answer the questions that are relevant to them.
-
-For questions where people select one option from a list, you can add a route from each option to send them to:
-
-- a later question in the form
-- an 'exit page', to explain why they cannot use the form and what to do instead
-- the end of the form
-
-From any other type of question, you can add a route to send people to a later question or the end of the form. This allows you to create ‘branches’ of different questions for people based on their answer to a previous question.
-So, for example, you can:
-
-- ask one set of questions for people who answer 'Yes' and another set for people who answer 'No'
-- ask a different set of questions for each of the options in a list
-- send people who select an option that makes them ineligible to an exit page
-
-For more details, [read our guidance about using routes](https://www.forms.service.gov.uk/about/using-routes).
-
-## Add an ‘exit page’ to remove someone from a form
-
-You can route someone to an ‘exit page’ based on their response to a question. You can use the exit page to tell them why they cannot use the form and explain what they should do instead.
-
-## Provide privacy information
-
-To comply with the UK General Data Protection Regulation (UK GDPR), you'll need to provide a link to privacy information for the people who'll enter their data into your form.
-
-The privacy information needs to include your purposes for collecting the data, and how you'll manage the data. You may already publish this information, for example in a privacy notice or personal information charter.
-
-A link to the privacy information will be added to the footer of your form.
-
-## Set up how you get data from completed forms
-
-By default, data from each completed form is sent in the body of an email - to the address you nominate when creating the form. You can opt to:
-
-- get data from each completed form in a CSV or JSON file, attached to the email - as well as in the body of the email
-- get data from completed forms sent to an AWS S3 bucket, instead of by email
-- get a daily or weekly CSV of all submissions to a form from the previous day or week, in addition to the individual completed form emails
-
-[Read more about options for processing completed form submissions](https://www.forms.service.gov.uk/processing-completed-form-submissions).
-
-## People can check their answers before they submit a form - and get a copy of them by email
-
-People will be shown a summary page when they have answered all the questions in a form. They will be able to review and check their answers before they submit the form. 
-
-You can give them the option to get a copy of their answers by email. We use GOV.UK One Login to help make sure answers are not sent to the wrong email address.
-
-## Add a declaration for people to agree to
-
-You can add a declaration that people must confirm they understand and agree to before they submit their completed form.
-
-You might want to add a declaration if, for example, you need people to confirm they have provided accurate information, or that they understand the consequences of providing false information.
-
-## Take a payment along with a form submission
-
-You can set up a page at the end of a form to take instant payments using [GOV⁠.⁠UK Pay](https://www.payments.service.gov.uk/). You'll need to set up a GOV.UK Pay account and a payment service provider if you don't already have these.
-
-## Tell people what will happen next
-
-Content you add about what will happen after the form is submitted will be shown:
-
-- on a confirmation page when someone submits a form
-- in an automatic email confirming that a form's been submitted - if someone chooses to receive this
-
-This will help to set their expectations and avoid unnecessary contact.
-
-## Provide contact information for people to get help
-
-You must provide at least one way for people to get help if they get stuck while filling in your form. It can be an email address, phone number or a link to online help.
-
-The contact information will be displayed at the bottom of every page of the form. This will help people to use your form successfully, and will let you know if there are any problems with your form.
-
-It will also be shown in an automatic email confirming that a form's been submitted - if someone chooses to receive this.
-
-## Welsh forms
-
-You can make a Welsh version of a form. People will be able to switch between English and Welsh as they go through the form.
-
-## Prepare changes to a live form in a draft
-
-You can make a draft version of a live form so you can prepare changes to it. This means you can share the new draft for review before you make the changes live. It also minimises disruption to people who might be filling in the form when you update it.
-
-## See how well your forms are working
-
-Use simple metrics to see how many forms were submitted and the completion rate by day.
-
-## Manage who can create and edit forms
-
-Your organisation can control who has access to different forms and who can make them live.
-
-## Forms use GOV.UK Design System styles, components and patterns
-
-Using these tested and accessible designs means you do not have to worry about the visual and interface design of your forms. And they'll automatically look consistent with GOV.UK.
-
-## Updates and forthcoming features
-
-When new features are released, we'll email users of the product and update this page.
-
-You can also <%= govuk_link_to "read about our forthcoming features", forthcoming_features_path %>.
+Some capabilities are enabled only where the service and its delivery arrangements support them. A feature appearing in the editor does not by itself authorise its use for a particular service.

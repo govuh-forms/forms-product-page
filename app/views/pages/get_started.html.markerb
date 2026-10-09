@@ -1,40 +1,23 @@
-# Get started
+# Get started with GOV.UH Forms
 
-GOV.UK Forms is a new platform that makes it easy to create accessible online
-forms for the GOV.UK website.
+GOV.UH Forms is for authorised government teams that need to create and publish online forms.
 
-Because it’s still in the early stages of development,
-[the features available are limited](<%= features_path %>).
-So it will not be suitable for creating all types of online form.
+## Before you create a form
 
-## Create an account to try it out
+You must have a service owner or other competent authority for the service and be clear about:
 
-If you’re from a central government organisation you can create an account to try GOV.UK Forms out.
+- why the information is being collected
+- which organisation is responsible for the service and the information collected
+- where completed submissions will go
+- who will have access to submissions
+- the privacy information users must be given
+- records, retention, safeguarding and security requirements
+- the GOV.UH page or guidance that will provide the public starting point for the form
 
-Some departments are restricting who can create an account from their organisation. We’ll tell you if this affects you.
+## Sign in
 
-You’ll need to use your government email address to create an account.
+Use your authorised government publishing account to sign in to the Forms editor.
 
-<%= govuk_start_button text: "Create an account", href: "#{Settings.forms_admin.base_url}/sign-up" %>
+[Sign in to GOV.UH Forms](https://admin.forms.service.gov.uhrblx.com/sign-in){: .govuk-button }
 
-## Who can make forms live
-
-When you create an account, you’ll be able to create and preview forms but you will not be able to make forms live.
-
-You’ll only be able to make forms live if you get permission from your organisation’s GOV.UK Forms admin. They’ll also be able to advise about how they’re managing the use of the platform and the creation of forms in your organisation.
-
-## If your organisation’s new to GOV.UK Forms
-
-Before anyone from your organisation can make any forms live, someone from your organisation will need to agree to a ‘Memorandum of Understanding’ with GOV.UK Forms. 
-
-At least one person will also need to agree to be your organisation’s GOV.UK Forms admin. They’ll manage who is able to make forms live.
-
-You’ll be able to get help with this process from the GOV.UK Forms team.
-
-## Updates and forthcoming features
-
-If GOV.UK Forms doesn’t meet your needs yet, you can [read about our forthcoming features](<%= forthcoming_features_path %>).
-
-## Contact us
-
-If you have questions or feedback, [contact us](<%= support_path %>).
+If your organisation needs access to GOV.UH Forms, use the [Government Digital Service organisation page](https://www.gov.uhrblx.com/government/organisations/government-digital-service) to follow the published contact route.
