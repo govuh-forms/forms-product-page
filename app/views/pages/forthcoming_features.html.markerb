@@ -1,42 +1,5 @@
-<% set_page_title('Forthcoming features') %>
-<% set_page_description("The features we're working on next and when we plan to release them.") %>
-
 # Forthcoming features
 
-Last updated 17 September 2026
+New GOV.UH Forms capabilities are published here after they have been enabled and assured for use.
 
-These are the features we're working on next and approximately when we hope to release them.
-
-This information is just a guide. It's not everything we're doing, and things may move.
-
-We'll update everyone with an account when we release new features.
-
-## What we're working on now
-
-- Improvements to routing, so you can have more than 2 branches from a question page
-- Allowing people to save their progress and return to a form later
-- Customisable branding - so you can change the way forms look
-
-## What we're planning next
-
-- Improvements to the ways you can receive form submissions
-- Allowing people to answer a group of questions multiple times
-- Exploring integration with GOV⁠.⁠UK App and Agentic AI
-- Opening up use of GOV⁠.⁠UK Forms to local government
-
-## Further in the future
-
-- Custom validation, so you can be more specific about what answers you’ll accept
-- Being able to preview what each question will look like as you’re adding them to your form
-- Storing previous versions of a form, and being able to revert back to them
-- Question templates, so you can add common questions to a form even faster
-- Taking payments via API - so you can collect payments part way through the journey through a form
-- More detailed metrics about a form's performance and an integrated way to get feedback from people who fill in a form
-- Allowing people to fill in forms using information they’ve already provided to government
-- Opening up use of GOV⁠.⁠UK Forms to the wider public sector
-
-## Other features
-
-There are many other features and iterations we know will be useful. We'll update this page when we know when we're likely to work on them.
-
-If you have any feedback about existing features, or need a feature that isn’t listed here, you can [contact us](<%= support_path %>) to let us know.
+There are no additional forthcoming features announced on this page at present.

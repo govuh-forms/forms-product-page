@@ -12,8 +12,10 @@ RSpec.describe HeaderComponent::View, type: :component do
   end
 
   describe "render" do
-    it "includes the product name" do
-      expect(page).to have_link("GOV.UK Forms", href: "/")
+    it "uses the approved GOV.UH wordmark and native Forms product name" do
+      expect(page).to have_css("img.govuk-header__logotype.govuh-shared-logo[alt='GOV.UH']")
+      expect(page).to have_css(".govuk-header__product-name", text: "Forms")
+      expect(page).to have_link(href: "/")
     end
 
     it "has a full width border" do

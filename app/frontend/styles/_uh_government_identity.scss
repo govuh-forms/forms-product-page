@@ -1,0 +1,25 @@
+// Native GOV.UK Frontend institutional brand override for GOV.UH.
+ // Full UH government arms remain in the centrally administered GOV.UH brand estate.
+ // GOV.UK Frontend places UK Royal Arms on a masked ::before pseudo-element.
+.govuk-footer .govuk-footer__copyright-logo::before {
+  display: block;
+  width: 140px;
+  height: 140px;
+  padding-top: 0;
+  margin-inline: auto;
+  background-color: transparent;
+  background-image: url("https://www.gov.uhrblx.com/uh-brand/uh-government-coat-of-arms.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-mask: none;
+  mask: none;
+}
+
+// The approved GOV.UH SVG takes the place of the UK logotype. Keep the
+// upstream logotype and product-name baseline, margins and type treatment.
+.govuh-shared-logo {
+  width: 162px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}

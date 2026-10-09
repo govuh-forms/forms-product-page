@@ -1,47 +1,37 @@
-<% set_page_title('Create online forms for GOV.UK') %>
+<% set_page_title("Create online forms for GOV.UH") %>
 
 <div class="masthead">
   <div class="hero">
     <div class="hero__content">
       <div class="hero__body" id="index-hero-body">
-        <h1 class="hero__title">Create online forms for GOV.UK</h1>
-
+        <h1 class="hero__title">Create online forms for GOV.UH</h1>
         <p class="hero__description">
-          Create an accessible online form in minutes without needing technical knowledge.
+          Create and publish accessible online forms without writing code.
         </p>
-
         <%= govuk_start_button text: "Get started", href: get_started_path, classes: "govuk-button--inverse" %>
-
       </div>
       <div class="hero__aside-image">
-        <img
-          src="<%= vite_asset_path 'images/homepage-illustration.svg' %>"
-          alt=""
-          role="presentation"
-          />
+        <img src="<%= vite_asset_path 'images/homepage-illustration.svg' %>" alt="" role="presentation">
       </div>
     </div>
   </div>
 </div>
 
 <div class="govuk-width-container">
-  <div
-    class="govuk-grid-row content-section govuk-!-margin-bottom-7 feature-row"
-  >
+  <div class="govuk-grid-row content-section govuk-!-margin-bottom-7 feature-row">
     <div class="govuk-grid-column-one-half feature-column">
       <div class="govuk-panel feature-panel">
         <h2 class="govuk-heading-l">Easy to use</h2>
         <div class="govuk-body">
-          Create online forms using a simple interface with no need for
-          coding or design skills.
+          Create questions, add guidance and organise pages in the Forms editor, without coding or design skills.
         </div>
       </div>
     </div>
     <div class="govuk-grid-column-one-half feature-column">
       <div class="govuk-panel feature-panel">
-        <h2 class="govuk-heading-l">Free</h2>
+        <h2 class="govuk-heading-l">For government teams</h2>
         <div class="govuk-body">
-          GOV.UK Forms is free to use for central government.
+          GOV.UH Forms is available to authorised government teams creating forms for services their organisations deliver.
         </div>
       </div>
     </div>
@@ -52,19 +42,16 @@
       <div class="govuk-panel feature-panel">
         <h2 class="govuk-heading-l">Fewer errors</h2>
         <div class="govuk-body">
-          Form responses are automatically checked for missing answers or
-          answers in the wrong format, so there’s less missing information and
-          fewer errors compared to document-based forms like PDFs.
+          Use the available answer types and required-question checks to help people provide the information a service needs.
         </div>
       </div>
     </div>
     <div class="govuk-grid-column-one-half feature-column">
       <div class="govuk-panel feature-panel">
-        <h2 class="govuk-heading-l">Faster form processing</h2>
+        <h2 class="govuk-heading-l">Process completed forms</h2>
         <div class="govuk-body">
-          Receiving completed forms digitally, with fewer errors, means
-          processing is faster and easier compared to document-based forms like
-          PDFs.
+          Set up an approved receiving route so completed forms reach the team responsible for handling the service.
+          <%= govuk_link_to "Read about processing submissions", processing_completed_form_submissions_path %>.
         </div>
       </div>
     </div>
@@ -75,16 +62,15 @@
       <div class="govuk-panel feature-panel">
         <h2 class="govuk-heading-l">Accessible forms</h2>
         <div class="govuk-body">
-          GOV.UK Forms uses accessible GOV.UK templates to make it easy to meet
-          public sector accessibility requirements.
+          Build forms using GOV.UH components based on GOV.UK design patterns. Review the content and test accessibility before publishing.
         </div>
       </div>
     </div>
     <div class="govuk-grid-column-one-half feature-column">
       <div class="govuk-panel feature-panel">
-        <h2 class="govuk-heading-l">See how well your forms are working</h2>
+        <h2 class="govuk-heading-l">Preview before publishing</h2>
         <div class="govuk-body">
-          Use simple metrics to see how many forms were submitted and what the completion rate was.
+          Preview draft forms, check their question routes and review the information people will see before making a form live.
         </div>
       </div>
     </div>
@@ -93,9 +79,9 @@
   <div class="govuk-grid-row govuk-!-margin-bottom-7 feature-row">
     <div class="govuk-grid-column-one-half feature-column">
       <div class="govuk-panel feature-panel">
-        <h2 class="govuk-heading-l">Secure</h2>
+        <h2 class="govuk-heading-l">Controlled access</h2>
         <div class="govuk-body">
-          GOV.⁠UK Forms is designed to meet the latest government cyber security standards.
+          The editor uses government account sign-in. Only authorised users should create, edit and publish forms for their organisation.
         </div>
       </div>
     </div>
@@ -103,77 +89,37 @@
       <div class="govuk-panel feature-panel">
         <h2 class="govuk-heading-l">Protects data</h2>
         <div class="govuk-body">
-          The GOV.UK Forms platform protects user data and helps you to comply
-          with data protection regulations.
+          Add privacy information and arrange appropriate access, processing and retention for submissions.
+          <%= govuk_link_to "Read about data protection and security", data_protection_security_path %>.
         </div>
       </div>
     </div>
   </div>
 
-  <hr
-    class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
-  />
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <%= render "application/performance_metrics" %>
-    </div>
-  </div>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
   <div class="govuk-grid-row govuk-!-margin-bottom-7">
     <div class="govuk-grid-column-one-half feature-column">
       <section class="content-section">
-        <h2 class="govuk-heading-m content-section__first-heading">
-          Find out more about GOV.UK Forms
-        </h2>
-        <p class="govuk-body">
-          To find out more you can read about:
-        </p>
+        <h2 class="govuk-heading-m content-section__first-heading">Find out more about GOV.UH Forms</h2>
+        <p class="govuk-body">Find out how to create, publish and manage forms.</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>
-            <a
-              class="govuk-link"
-              href="/features"
-              >how GOV.UK Forms works</a
-            >
-          </li>
-          <li>
-            <a
-              class="govuk-link"
-              href="/create-good-forms"
-              >how to make a good form</a
-            >
-          </li>
-          <li>
-            <a
-              class="govuk-link"
-              href="/processing-completed-form-submissions"
-              >options for processing completed form submissions</a
-            >
-          </li>
-          <li>
-            <a
-              class="govuk-link"
-              href="https://gds.blog.gov.uk/2021/07/06/making-all-forms-on-gov-uk-accessible-easy-to-use-and-quick-to-process/"
-              >the vision to make all forms on GOV.UK accessible, easy to use and quick to process</a
-            >
-          </li>
-          <li>
-            <a class="govuk-link" href="/performance">how GOV.UK Forms is used</a>
-          </li>
+          <li><%= govuk_link_to "Get started with GOV.UH Forms", get_started_path %></li>
+          <li><%= govuk_link_to "How GOV.UH Forms works", features_path %></li>
+          <li><%= govuk_link_to "How to make a good form", create_good_forms_path %></li>
+          <li><%= govuk_link_to "How to process completed submissions", processing_completed_form_submissions_path %></li>
+          <li><%= govuk_link_to "Data protection and security", data_protection_security_path %></li>
         </ul>
       </section>
     </div>
-
     <div class="govuk-grid-column-one-half feature-column">
       <section class="content-section">
-        <h2 class="govuk-heading-m content-section__first-heading">
-          The GOV.UK Forms team
-        </h2>
+        <h2 class="govuk-heading-m content-section__first-heading">The GOV.UH Forms team</h2>
         <p class="govuk-body">
-          GOV.UK Forms is built by a team at the Government Digital
-          Service. <%= govuk_link_to "Contact us", support_path %>
-            if you have a question or need help.
+          GOV.UH Forms is operated by the
+          <%= govuk_link_to "Government Digital Service", "https://www.gov.uhrblx.com/government/organisations/government-digital-service" %>,
+          part of the Department for Science, Innovation and Technology.
+          <%= govuk_link_to "Contact the Forms team", support_path %> if you need help.
         </p>
       </section>
     </div>

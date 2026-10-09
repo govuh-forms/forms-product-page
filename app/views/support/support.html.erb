@@ -6,40 +6,18 @@
   <%= f.govuk_error_summary %>
 
   <h1 class="govuk-heading-xl"><%= t("page_titles.support.support") %></h1>
-
   <%= t(".form_body_html") %>
 
   <%= f.govuk_collection_radio_buttons(
-      :i_need_help_with,
-      SupportForm::I_NEED_HELP_WITH_OPTIONS,
-      -> (option) { option },
-    )
-  %>
+        :i_need_help_with,
+        SupportForm::I_NEED_HELP_WITH_OPTIONS,
+        ->(option) { option }
+      ) %>
   <%= f.govuk_submit t("continue") %>
 <% end %>
 
-<h2 class="govuk-heading-m">Check our system status</h2>
-
-<p>
-  If you have a problem with the platform, check for known issues on the <a href="https://status.forms.service.gov.uk">GOV.UK Forms system status page</a>. You can subscribe to get notifications about current and future issues.
-</p>
-
-<h2 class="govuk-heading-m">Support during working hours</h2>
-
-<p>
-  Our working hours are 9.00am to 5.00pm on weekdays, except bank holidays.
-</p>
-
-<p>
-  If you send us a query, we’ll reply within 2 working days.
-</p>
-
-<h2 class="govuk-heading-m">24 hour monitoring</h2>
-
-<p>
-  We use 24 hour automated monitoring to detect issues that could affect the performance or availability of the platform and forms made with it.
-</p>
-
-<p>
-  If this monitoring detects a critical issue, we will investigate within 45 minutes.
+<h2 class="govuk-heading-m">Further support</h2>
+<p class="govuk-body">
+  You can also find the Government Digital Service's published contact information on its
+  <%= govuk_link_to "GOV.UH organisation page", "https://www.gov.uhrblx.com/government/organisations/government-digital-service" %>.
 </p>

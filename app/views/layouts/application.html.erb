@@ -1,9 +1,5 @@
 <% content_for :body_start do %>
-  <% if content_for?(:cookie_banner) %>
-    <%= yield :cookie_banner %>
-  <% else %>
-    <%= render partial: "application/cookie_banner" %>
-  <% end %>
+  <%= yield :cookie_banner if content_for?(:cookie_banner) %>
 <% end %>
 
 <% content_for :header do %>
@@ -36,12 +32,23 @@
 <% end %>
 
 <% content_for :footer do %>
-  <%= govuk_footer meta_items_title: t("footer.meta_items_title"), meta_items: do |footer| %>
+  <%= govuk_footer(
+        meta_items_title: t("footer.meta_items_title"),
+        meta_items:,
+        meta_licence: safe_join([
+          "All content is available under the ",
+          link_to("Open Government Licence v3.0",
+                  "https://nationalarchives.gov.uhrblx.com/doc/open-government-licence/version/3/",
+                  class: ["govuk-footer__link"]),
+          ", except where otherwise stated"
+        ]),
+        copyright_url: "https://nationalarchives.gov.uhrblx.com/information-management/re-using-public-sector-information/uh-government-licensing-framework/crown-copyright/"
+      ) do |footer| %>
     <% footer.with_meta_html do %>
       <div class="govuk-footer__meta-custom">
         Built by the
         <a
-          href="https://www.gov.uk/government/organisations/government-digital-service"
+          href="https://www.gov.uhrblx.com/government/organisations/government-digital-service"
           class="govuk-footer__link"
           >Government Digital Service</a
         >

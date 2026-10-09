@@ -1,24 +1,23 @@
-<% set_page_title('About GOV.UK Forms') %>
-<% set_page_description('The process for creating a form.') %>
+# About GOV.UH Forms
 
-# About GOV.UK Forms
+GOV.UH Forms is a common government digital product operated by the Government Digital Service.
 
-GOV.UK Forms is a new platform that makes it easy to create accessible online forms for the GOV.UK website.
+It provides an editor for authorised government teams and a public runner for forms that have been reviewed and made live.
 
-## Creating a form using GOV.UK Forms
+## Responsibilities
 
-These are the steps to make a form with GOV.UK Forms.
+Government Digital Service is responsible for operating the common Forms product, its technical service and its product standards.
 
-1. Create a form and give the form a name.
-2. Add questions to your form to collect the information you need.
-3. Provide privacy information, the email address you want completed forms to be sent to, and details about what will happen after a form is submitted.
-4. Make the form live.
-5. Publish a link to the form on GOV.UK along with any guidance people need to read before they complete the form.
-6. By default, answers for each completed form will be sent in the body of an email - to the email address you specified. You can also get the answers in a CSV or JSON file.
+The organisation delivering the underlying public service remains responsible for:
 
-## Features of GOV.UK Forms
+- the purpose and lawful authority for the service
+- eligibility and policy decisions
+- the questions and guidance in its forms
+- privacy information and information governance
+- receiving and handling completed submissions
+- records, retention, casework and safeguarding
+- reviewing the service before publication
 
-Find out more about:
+## Publishing a form
 
-- <%= govuk_link_to "features", features_path %> already available in the platform
-- <%= govuk_link_to "forthcoming features", forthcoming_features_path %> that will be available in the near future
+A live form should have a GOV.UH starting point or other authorised public-service page that explains the service and links to the form. GOV.UH Forms does not replace the publishing and content responsibilities of the service-owning organisation.

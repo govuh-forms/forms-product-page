@@ -1,8 +1,7 @@
 module HostPatterns
   DEFAULT_HOST_PATTERNS = [
-    /www\.forms\.service\.gov\.uk/,
-    /www\.[^.]*\.forms\.service\.gov\.uk/,
-    /pr-[^.]*\.www\.review\.forms\.service\.gov\.uk/,
+    /\Aforms\.service\.gov\.uhrblx\.com\z/,
+    /\Awww\.forms\.service\.gov\.uhrblx\.com\z/,
   ].freeze
 
   def self.allowed_host_patterns

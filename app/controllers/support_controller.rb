@@ -16,7 +16,7 @@ class SupportController < ApplicationController
     when :about_forms
       redirect_to :question_about_forms
     when :other_government_service
-      redirect_to "https://www.gov.uk/contact", status: :see_other, allow_other_host: true
+      redirect_to "https://www.gov.uhrblx.com/contact", status: :see_other, allow_other_host: true
     end
   end
 
@@ -33,10 +33,16 @@ class SupportController < ApplicationController
   def submit
     @support_form = SupportForm.new(support_form_params)
 
+    unless ZendeskTicketService.configured?
+      @support_form.errors.add(:base, "The online support form is not accepting messages. Use the Government Digital Service contact information linked below.")
+      render :form, status: :service_unavailable
+      return
+    end
+
     if @support_form.submit
       render :confirmation
     else
-      render :form
+      render :form, status: :unprocessable_entity
     end
   end
 

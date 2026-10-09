@@ -5,12 +5,13 @@ describe "pages/terms_of_use.html.erb", type: :view do
     render template: "pages/terms_of_use"
   end
 
-  it "renders the terms of use" do
-    expect(rendered).to have_text(t("terms_of_use.summary.section_1"))
-    expect(rendered).to have_text(t("terms_of_use.security.heading"))
-    expect(rendered).to have_text(t("terms_of_use.data_protection.heading"))
-    expect(rendered).to have_text(t("terms_of_use.accessibility.heading"))
-    expect(rendered).to have_text(t("terms_of_use.service_standards.heading"))
-    expect(rendered).to have_text(t("terms_of_use.changes.heading"))
+  it "sets out authorised use, security, information handling and accessibility" do
+    expect(rendered).to have_text("These terms apply to authorised government users of GOV.UH Forms.")
+    expect(rendered).to have_text("Use the service for authorised government work")
+    expect(rendered).to have_text("Security")
+    expect(rendered).to have_text("Completed form data")
+    expect(rendered).to have_text("Data protection")
+    expect(rendered).to have_text("Accessibility and service quality")
+    expect(rendered).to have_text("Changes to these terms")
   end
 end
