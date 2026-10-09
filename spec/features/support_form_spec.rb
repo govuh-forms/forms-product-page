@@ -20,9 +20,11 @@ feature "GOV.UH Forms Support", type: :system do
 
   context "with a configured support-ticket provider" do
     before do
-      allow(Settings.zendesk).to receive(:api_user).and_return("qa@example.org")
-      allow(Settings.zendesk).to receive(:api_token).and_return("unit-test-token")
-      allow(Settings.zendesk).to receive(:subdomain).and_return("uh-forms-unit-test")
+      allow(Settings.zendesk).to receive_messages(
+        api_user: "qa@example.org",
+        api_token: "unit-test-token",
+        subdomain: "uh-forms-unit-test",
+      )
       stub_request(:post, "https://uh-forms-unit-test.zendesk.com/api/v2/tickets.json")
         .to_return { |request| { status: 201, body: request.body } }
     end

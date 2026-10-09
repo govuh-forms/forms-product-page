@@ -90,6 +90,7 @@ describe "support/form.html.erb", type: :view do
       expect(rendered).to have_css(".govuk-error-message", text: I18n.t("activemodel.errors.models.support_form.attributes.name.blank"))
     end
   end
+
   context "when support ticketing is unavailable" do
     let(:ticketing_configured) { false }
 

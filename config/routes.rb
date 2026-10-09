@@ -28,7 +28,6 @@ Rails.application.routes.draw do
 
   resources :performance, only: %i[index]
 
-
   get "/support" => "support#support", as: :support
   post "/support" => "support#new", as: :new_support_message
   get "/support/help-using-forms" => "support#help_using_forms", as: :help_using_forms
