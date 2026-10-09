@@ -18,6 +18,6 @@ You must have a service owner or other competent authority for the service and b
 
 Use your authorised government publishing account to sign in to the Forms editor.
 
-[Sign in to GOV.UH Forms](https://admin.forms.service.gov.uhrblx.com/sign-in){: .govuk-button }
+<%= govuk_start_button text: "Sign in to GOV.UH Forms", href: "#{Settings.forms_admin.base_url}/sign-in" %>
 
 If your organisation needs access to GOV.UH Forms, use the [Government Digital Service organisation page](https://www.gov.uhrblx.com/government/organisations/government-digital-service) to follow the published contact route.
