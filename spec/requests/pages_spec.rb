@@ -37,6 +37,17 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
+  describe "GET /get-started" do
+    before { get "/get-started" }
+
+    it "provides the actual Forms Admin Signon entry point" do
+      expect(response).to have_http_status(:ok)
+      document = Capybara.string(response.body)
+      expect(document).to have_link("Sign in to GOV.UH Forms", href: "#{Settings.forms_admin.base_url}/sign-in")
+      expect(document).to have_link("Government Digital Service organisation page", href: "https://www.gov.uhrblx.com/government/organisations/government-digital-service")
+    end
+  end
+
   describe "GET /cookies" do
     before do
       get cookies_path
