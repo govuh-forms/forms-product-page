@@ -1,23 +1,16 @@
 # About GOV.UH Forms
 
-GOV.UH Forms is a common government digital product operated by the Government Digital Service.
+GOV.UH Forms helps government organisations create and publish online forms.
 
-It provides an editor for authorised government teams and a public runner for forms that have been reviewed and made live.
+## Creating a form
 
-## Responsibilities
+1. Create a form and give it a name.
+2. Add questions to collect the information you need.
+3. Add privacy information, contact details and the information people need after submitting the form.
+4. Make the form live when it is ready and approved for publication.
+5. Link to the form from the relevant GOV.UH service page, with any guidance needed before starting.
+6. Receive completed forms through the delivery method configured for the form.
 
-Government Digital Service is responsible for operating the common Forms product, its technical service and its product standards.
+## Features
 
-The organisation delivering the underlying public service remains responsible for:
-
-- the purpose and lawful authority for the service
-- eligibility and policy decisions
-- the questions and guidance in its forms
-- privacy information and information governance
-- receiving and handling completed submissions
-- records, retention, casework and safeguarding
-- reviewing the service before publication
-
-## Publishing a form
-
-A live form should have a GOV.UH starting point or other authorised public-service page that explains the service and links to the form. GOV.UH Forms does not replace the publishing and content responsibilities of the service-owning organisation.
+[Find out what GOV.UH Forms can do](/about/features).
