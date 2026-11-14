@@ -2,7 +2,7 @@
 
 This accessibility statement applies to the GOV.UH Forms product website, the Forms editor and forms published through the GOV.UH Forms Runner.
 
-We want as many people as possible to be able to use these services. They use the GOV.UH adaptation of established government design components and patterns.
+We want as many people as possible to be able to use these services.
 
 ## Feedback and contact information
 
@@ -16,8 +16,8 @@ Government Digital Service is responsible for the accessibility of the common GO
 
 ## Compliance status
 
-A formal accessibility audit of the complete GOV.UH deployment has not yet been recorded. The service must not be described as fully compliant until that assessment has been completed and any identified issues have been addressed.
+A formal accessibility audit of the complete GOV.UH deployment has not yet been recorded. 
 
 ## Preparation of this statement
 
-This statement was prepared on 7 October 2026. It should be updated when the formal accessibility assessment is completed or when a material accessibility change is made.
+This statement was prepared on 7 October 2026 and updated on 14 November 2026.

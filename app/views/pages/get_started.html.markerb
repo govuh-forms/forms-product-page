@@ -1,23 +1,19 @@
 # Get started with GOV.UH Forms
 
-GOV.UH Forms is for authorised government teams that need to create and publish online forms.
-
-## Before you create a form
-
-You must have a service owner or other competent authority for the service and be clear about:
-
-- why the information is being collected
-- which organisation is responsible for the service and the information collected
-- where completed submissions will go
-- who will have access to submissions
-- the privacy information users must be given
-- records, retention, safeguarding and security requirements
-- the GOV.UH page or guidance that will provide the public starting point for the form
+GOV.UH Forms lets authorised government teams create online forms.
 
 ## Sign in
 
-Use your authorised government publishing account to sign in to the Forms editor.
+Use your government account to sign in to Forms.
 
 <%= govuk_start_button text: "Sign in to GOV.UH Forms", href: "#{Settings.forms_admin.base_url}/sign-in" %>
 
-If your organisation needs access to GOV.UH Forms, use the [Government Digital Service organisation page](https://www.gov.uhrblx.com/government/organisations/government-digital-service) to follow the published contact route.
+## Who can make forms live
+
+You can create and preview forms when you have access to the editor. Your organisation's Forms administrator can grant permission to make forms live.
+
+## If your organisation is new to GOV.UH Forms
+
+An authorised representative must accept the current Memorandum of Understanding before the organisation can activate a new production group.
+
+For access enquiries, [contact GOV.UH Forms support](/support).
