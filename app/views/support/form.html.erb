@@ -2,7 +2,7 @@
 <% set_page_robots("noindex") %>
 <% content_for :back_link, govuk_back_link(href: support_path) %>
 
-<% if ZendeskTicketService.configured? %>
+<% if FormsSupportTicketService.configured? %>
   <%= form_with model: @support_form, url: false do |f| %>
     <%= f.govuk_error_summary %>
 
@@ -10,7 +10,10 @@
     <%= f.hidden_field :i_need_help_with %>
     <%= f.govuk_text_area @support_form.i_need_help_with.to_sym == :using_forms ? :message : :question, rows: 10, spellcheck: true %>
     <%= f.govuk_text_field :name, autocomplete: :name, spellcheck: false %>
-    <%= f.govuk_email_field :email_address, autocomplete: :email, spellcheck: false %>
+    <h2 class="govuk-heading-m">Your contact details</h2>
+    <p class="govuk-body">Provide an email address, a Discord username or user ID, or both.</p>
+    <%= f.govuk_email_field :email_address, autocomplete: :email, spellcheck: false, label: { text: "Email address (optional)" } %>
+    <%= f.govuk_text_field :discord_contact, spellcheck: false, maxlength: 100, label: { text: "Discord username or user ID (optional)" }, hint: { text: "Use your Discord username, not your display name. You can also provide your numerical Discord user ID." } %>
     <%= f.govuk_submit t("send") %>
   <% end %>
 <% else %>
