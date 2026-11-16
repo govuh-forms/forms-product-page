@@ -1,0 +1,11 @@
+<% set_page_title("GOV.UH Forms support case") %>
+<% set_page_robots("noindex") %>
+<h1 class="govuk-heading-l">Your GOV.UH Forms support case</h1>
+<p class="govuk-body">Reference: <strong><%= @case_details.fetch("reference") %></strong></p>
+<p class="govuk-body">Status: <strong><%= @case_details.fetch("status").humanize %></strong></p>
+<% if @case_details["reply"].present? %>
+  <h2 class="govuk-heading-m">Reply from GOV.UH Forms support</h2>
+  <div class="govuk-inset-text" style="white-space:pre-wrap"><%= @case_details["reply"] %></div>
+<% else %>
+  <p class="govuk-body">Your message has been received. No reply has been added yet.</p>
+<% end %>

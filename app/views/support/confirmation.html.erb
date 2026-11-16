@@ -3,3 +3,8 @@
 <%= govuk_panel(title_text: t("page_titles.support.confirmation")) %>
 
 <%= t(".body_html") %>
+
+<h2 class="govuk-heading-m">Your support reference</h2>
+<p class="govuk-body"><strong><%= @ticket_reference %></strong></p>
+<p class="govuk-body"><%= govuk_link_to "Save your private case-status link", @ticket_status_url %>. You can use that link to check for a reply. Keep it private.</p>
+<p class="govuk-body">Replies are shown on your private case page. Email notifications are not currently sent.</p>

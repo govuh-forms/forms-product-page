@@ -33,17 +33,33 @@ class SupportController < ApplicationController
   def submit
     @support_form = SupportForm.new(support_form_params)
 
-    unless ZendeskTicketService.configured?
+    unless FormsSupportTicketService.configured?
       @support_form.errors.add(:base, "The online support form is not accepting messages. Use the Government Digital Service contact information linked below.")
       render :form, status: :service_unavailable
       return
     end
 
-    if @support_form.submit
+    if (result = @support_form.submit)
+      @ticket_reference = result.fetch("reference")
+      @ticket_status_url = support_case_status_path(result.fetch("access_token"))
+      response.headers["Cache-Control"] = "no-store"
+      response.headers["Referrer-Policy"] = "no-referrer"
       render :confirmation
     else
       render :form, status: :unprocessable_entity
     end
+  rescue FormsSupportTicketService::DeliveryError
+    @support_form.errors.add(:base, "Your message has not been sent. Please try again.")
+    render :form, status: :service_unavailable
+  end
+
+  def case_status
+    @case_details = FormsSupportTicketService.status!(params[:access_token])
+    response.headers["Cache-Control"] = "no-store"
+    response.headers["Referrer-Policy"] = "no-referrer"
+    render :case_status
+  rescue FormsSupportTicketService::DeliveryError
+    render plain: "Case not found or temporarily unavailable", status: :not_found
   end
 
 private
@@ -51,6 +67,6 @@ private
   def support_form_params
     params
       .require(:support_form)
-      .permit(:i_need_help_with, :message, :question, :name, :email_address)
+      .permit(:i_need_help_with, :message, :question, :name, :email_address, :discord_contact)
   end
 end
