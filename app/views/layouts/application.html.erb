@@ -36,12 +36,13 @@
         meta_items_title: t("footer.meta_items_title"),
         meta_items:,
         meta_licence: safe_join([
-          "All content is available under the ",
-          link_to("Open Government Licence v3.0",
+          "Original UH content is available under the ",
+          link_to("UH Open Government Licence v3.0",
                   "https://nationalarchives.gov.uhrblx.com/doc/open-government-licence/version/3/",
                   class: ["govuk-footer__link"]),
-          ", except where otherwise stated"
+          ", except where otherwise stated. Third-party material retains its own licence."
         ]),
+        copyright_text: "© UH Crown copyright",
         copyright_url: "https://nationalarchives.gov.uhrblx.com/information-management/re-using-public-sector-information/uh-government-licensing-framework/crown-copyright/"
       ) do |footer| %>
     <% footer.with_meta_html do %>
